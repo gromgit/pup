@@ -279,7 +279,7 @@ func jsonify(node *html.Node) map[string]interface{} {
 		case html.ElementNode:
 			children = append(children, jsonify(child))
 		case html.TextNode:
-			text := strings.TrimSpace(child.Data)
+			text := child.Data
 			if text != "" {
 				if pupEscapeHTML {
 					// don't escape javascript
