@@ -104,7 +104,10 @@ func (t TreeDisplayer) printPre(n *html.Node) {
 		if pupEscapeHTML {
 			data = html.EscapeString(data)
 		}
-		fmt.Printf("<!--%s-->\n", data)
+		fmt.Printf("<!--%s-->", data)
+		if !pupRawOutput {
+			fmt.Println()
+		}
 		for c := n.FirstChild; c != nil; c = c.NextSibling {
 			t.printPre(c)
 		}
@@ -126,17 +129,25 @@ func (t TreeDisplayer) printNode(n *html.Node, level int) {
 				s = html.EscapeString(s)
 			}
 		}
-		s = strings.TrimSpace(s)
-		if s != "" {
-			t.printIndent(level)
-			fmt.Println(s)
+		if pupRawOutput {
+			fmt.Print(s)
+		} else {
+			s = strings.TrimSpace(s)
+			if s != "" {
+				t.printIndent(level)
+				fmt.Println(s)
+			}
 		}
 	case html.ElementNode:
-		t.printIndent(level)
+		if !pupRawOutput {
+			t.printIndent(level)
+		}
 		// TODO: allow pre with color
 		if n.DataAtom == atom.Pre && !pupPrintColor && pupPreformatted {
 			t.printPre(n)
-			fmt.Println()
+			if !pupRawOutput {
+				fmt.Println()
+			}
 			return
 		}
 		if pupPrintColor {
@@ -160,31 +171,44 @@ func (t TreeDisplayer) printNode(n *html.Node, level int) {
 			}
 		}
 		if pupPrintColor {
-			tokenColor.Println(">")
+			tokenColor.Print(">")
 		} else {
-			fmt.Println(">")
+			fmt.Print(">")
+		}
+		if !pupRawOutput {
+			fmt.Println()
 		}
 		if !isVoidElement(n) {
 			t.printChildren(n, level+1)
-			t.printIndent(level)
+			if !pupRawOutput {
+				t.printIndent(level)
+			}
 			if pupPrintColor {
 				tokenColor.Print("</")
 				tagColor.Printf("%s", n.Data)
-				tokenColor.Println(">")
+				tokenColor.Print(">")
 			} else {
-				fmt.Printf("</%s>\n", n.Data)
+				fmt.Printf("</%s>", n.Data)
+			}
+			if !pupRawOutput {
+				fmt.Println()
 			}
 		}
 	case html.CommentNode:
-		t.printIndent(level)
+		if !pupRawOutput {
+			t.printIndent(level)
+		}
 		data := n.Data
 		if pupEscapeHTML {
 			data = html.EscapeString(data)
 		}
 		if pupPrintColor {
-			commentColor.Printf("<!--%s-->\n", data)
+			commentColor.Printf("<!--%s-->", data)
 		} else {
-			fmt.Printf("<!--%s-->\n", data)
+			fmt.Printf("<!--%s-->", data)
+		}
+		if !pupRawOutput {
+			fmt.Println()
 		}
 		t.printChildren(n, level)
 	case html.DoctypeNode, html.DocumentNode:
@@ -252,7 +276,10 @@ func (a AttrDisplayer) Display(nodes []*html.Node) {
 				if pupEscapeHTML {
 					val = html.EscapeString(val)
 				}
-				fmt.Printf("%s\n", val)
+				fmt.Printf("%s", val)
+				if !pupRawOutput {
+					fmt.Println()
+				}
 			}
 		}
 	}
@@ -324,7 +351,10 @@ func (j JSONDisplayer) Display(nodes []*html.Node) {
 	if err != nil {
 		panic("Could not jsonify nodes")
 	}
-	fmt.Printf("%s\n", data)
+	fmt.Printf("%s", data)
+	if !pupRawOutput {
+		fmt.Println()
+	}
 }
 
 // Print the number of features returned

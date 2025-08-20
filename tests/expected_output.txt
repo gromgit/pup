@@ -51,3 +51,56 @@ da39a3ee5e6b4b0d3255bfef95601890afd80709 li --number
 da39a3ee5e6b4b0d3255bfef95601890afd80709 li -n
 4c15ca8f190a4412469e487fab6f7ad2479f922f p:contains("Rob")
 1d01b213218645c7ba63da1f351e8269c1f6421a p:matches("Ro*")
+21686d09f2802fa7f111c9f04dd0dacd7e4e6505 #footer
+59ac6247d71b9e848aa1e42bb92a4d76f2c55729 #footer li
+da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li + a
+da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li + a attr{title}
+da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li > li
+6b90249f0250173542e7ff1716f9166f8c01eeec table li
+281c2312d039d7ad2fd8d33f10d265ea4e225d6e table li:first-child
+281c2312d039d7ad2fd8d33f10d265ea4e225d6e table li:first-of-type
+a7dafee8ca1e09c4ab39e36a1c861a9415944e22 table li:last-child
+a7dafee8ca1e09c4ab39e36a1c861a9415944e22 table li:last-of-type
+3b7b51a73fb5147ceceb63cff599fa7197f23051 table a[title="The Practice of Programming"]
+0d3918d54f868f13110262ffbb88cbb0b083057d table a[title="The Practice of Programming"] text{}
+db3637df5f20644eb12e2ba9536479b271f0ea39 json{}
+95ef88ded9dab22ee3206cca47b9c3a376274bda text{}
+5840895dcf36c4eadfc911eb87eb61f89f448c00 .after-portlet
+da39a3ee5e6b4b0d3255bfef95601890afd80709 .after
+8adaa62f3360f31b1f6f0ca9a0ecabc66b6c6191 .dtstart.updated
+0ef17ce9b9d7625b18b736374aa702ea53e61fe9 :empty
+6ab626c251eb3023f0a7a40201270b8f689e634b td:empty
+63e7be95290bdd49f2aa73c72079840de27a298f .navbox-list li:nth-child(1)
+00a8a1696e87e79a8d5fb72b1ec7593a6308a639 .navbox-list li:nth-child(2)
+cd67298f51058de60908821f0d8dd91585742d1e .navbox-list li:nth-child(3)
+6cdd45e4e74c4bfa15be607ff9bc2ff211ff70fb .navbox-list li:nth-last-child(1)
+9dabb6cc0540bb22e5c8cd655e97d7317903c695 .navbox-list li:nth-last-child(2)
+0617ad2ebc5c56db0c6ed544fe79c4167336ad5b .navbox-list li:nth-last-child(3)
+4d94ef57bbf233aa84cd860daa555e26ef329c75 .navbox-list li:nth-child(n+1)
+f6badd542b9bb30490b998fca8a0a5102e7e403c .navbox-list li:nth-child(3n+1)
+4d94ef57bbf233aa84cd860daa555e26ef329c75 .navbox-list li:nth-last-child(n+1)
+dd6e2f353f2511986284e52f5de2fb0d6a6c0397 .navbox-list li:nth-last-child(3n+1)
+1b847807da8c959674fd5cb484c9f302980e7868 :only-child
+c42d8d29196c2dd9536558bd6070ebefda6035ed .navbox-list li:only-child
+5eecf5fa11b0843f27e60afcd5780661fedf2482 .summary
+5eecf5fa11b0843f27e60afcd5780661fedf2482 [class=summary]
+5eecf5fa11b0843f27e60afcd5780661fedf2482 [class="summary"]
+4075393b44ec0ea3f1a1c5de497781525541f1a3 [keep:empty]
+e7bd619d58235edea5c9d0c7ce31983b5ce9d2d7 #toc
+da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + a
+da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + a text{}
+97d170e1550eee4afc0af065b78cda302a97674c #toc li + a json{}
+da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + a + span
+da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + span
+da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li > li
+c4856bfe75a7596c6f082c9e2a67e5ae0860d387 li a:not([rel])
+b06226be351780e1698b606f1226f79ab4a68817 link, a
+b06226be351780e1698b606f1226f79ab4a68817 link ,a
+b06226be351780e1698b606f1226f79ab4a68817 link , a
+dee8e56503a021bc2964f762f0a7fc2b52c05e36 link , a sup
+76d9e66481fe6aefc2a8b59410dfa439562fd64d link , a:parent-of(sup)
+dee8e56503a021bc2964f762f0a7fc2b52c05e36 link , a:parent-of(sup) sup
+da39a3ee5e6b4b0d3255bfef95601890afd80709 li --number
+da39a3ee5e6b4b0d3255bfef95601890afd80709 li -n
+7afea0a296eb2c91d2f08dc75abebb9c8a245d2a p:contains("Rob")
+0ea8f38e34929e44bfee0ab6471449a2b02efcab p:matches("Ro*")
