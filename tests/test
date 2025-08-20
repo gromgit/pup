@@ -1,29 +1,52 @@
 #!/bin/bash
 testdir=$(dirname "$0")
 pup=${PUP:-"${testdir}/../pup"}
+flags=()
 cmds="${testdir}/cmds.txt"
 input="${testdir}/index.html"
 output="${testdir}/test_results.txt"
 expected="${testdir}/expected_output.txt"
-trap 'rm -f "$output"' EXIT
+trap 'rm -f "${output}"' EXIT
+
+fatal() {
+  printf 'FATAL ERROR: %s' "$@"
+  exit 1
+}
+
+dumpit() {
+  if [[ -n ${dumpdir} ]]; then
+    tee "$(printf %s/%d-%04d.txt "${dumpdir}" "$@")"
+  else
+    cat
+  fi
+}
 
 while true; do
   case "$1" in
     -update) mode=update;;
+    -dump) dumpdir="${testdir}/dump"; mkdir -p "${dumpdir}" || fatal "Can't create dump dir '${dumpdir}'";;
     *) break;;
   esac
   shift
 done
 
+section=1 line=1
 while read -r t; do
-  "$pup" "$t" < "$input" | shasum | while read -r sum _; do
-    echo "$sum $t"
-  done
-done < "$cmds" > "$output"
+  if [[ ${t} =~ "##flags: "(.*) ]]; then
+    # Retrieve cmd-line flags for subsequent use
+    read -ra flags <<<"${BASH_REMATCH[1]}"
+    ((section++, line=1))
+  else
+    "${pup}" "${flags[@]}" "${t}" < "${input}" | dumpit "${section}" "${line}" | shasum | while read -r sum _; do
+      echo "${sum} ${t}"
+    done
+    ((line++))
+  fi
+done < "${cmds}" > "${output}"
 
-if [[ $mode == "update" ]]; then
-  mv "$output" "$expected"
-  echo "$expected updated"
+if [[ ${mode} == "update" ]]; then
+  mv "${output}" "${expected}"
+  echo "${expected} updated"
 else
-  diff "$expected" "$output" && echo "OK"
+  diff "${expected}" "${output}" && echo "OK"
 fi
