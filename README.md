@@ -9,15 +9,15 @@ fast and flexible way of exploring HTML from the terminal.
 
 ## Install
 
-Direct downloads are available through the [releases page](https://github.com/EricChiang/pup/releases/latest).
+Direct downloads are available through the [releases page](https://github.com/gromgit/pup/releases/latest).
 
 If you have Go installed on your computer just run `go install`.
 
-    go install github.com/gromgit/pup
+    go install github.com/gromgit/pup@latest
 
 If you're on macOS or Linux, use [Homebrew](http://brew.sh/) to install (no Go required).
 
-    brew install pup
+    brew install gromgit/tap/pup
 
 ## Quick start
 
