@@ -241,7 +241,7 @@ cat index.html | pup 'element#id[attribute="value"]:first-of-type'
 Non-HTML selectors which effect the output type are implemented as functions
 which can be provided as a final argument.
 
-#### `text{}`
+#### `text{[modifiers]}`
 
 Print all text from selected nodes and children in depth first order.
 
@@ -262,6 +262,24 @@ Meta tags and headers
 See also
 References
 External links
+```
+
+The following modifiers are supported, and can be chained with `+`:
+
+* `trim`: strip all whitespace from both ends of the text
+* `upper`: convert text to upper case
+* `lower`: convert text to lower case
+
+```bash
+$ pup -p < robots.html > robots-pretty.html
+$ pup -p 'title text{}' < robots-pretty.html
+
+   robots.txt - Wikipedia
+
+$ pup -p 'title text{trim}' < robots-pretty.html
+robots.txt - Wikipedia
+$ pup -p 'title text{trim+upper}' < robots-pretty.html
+ROBOTS.TXT - WIKIPEDIA
 ```
 
 #### `attr{attrkey}`
