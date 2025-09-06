@@ -12,6 +12,10 @@ table a[title="The Practice of Programming"]
 table a[title="The Practice of Programming"] text{}
 json{}
 text{}
+text{trim}
+text{upper+trim}
+text{lower+trim}
+text{trim+lower+upper}
 .after-portlet
 .after
 .dtstart.updated
@@ -66,6 +70,10 @@ table a[title="The Practice of Programming"]
 table a[title="The Practice of Programming"] text{}
 json{}
 text{}
+text{trim}
+text{upper+trim}
+text{lower+trim}
+text{trim+lower+upper}
 .after-portlet
 .after
 .dtstart.updated

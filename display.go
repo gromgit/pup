@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 	"regexp"
 	"strings"
 
@@ -23,13 +24,16 @@ type Displayer interface {
 func ParseDisplayer(cmd string) error {
 	// Ref: https://www.w3.org/TR/2012/WD-html5-20120329/syntax.html#syntax-attribute-name
 	attrRe := regexp.MustCompile(`attr\{([^\s"'>/=\p{Cc}]+)\}`)
-	if cmd == "text{}" {
-		pupDisplayer = TextDisplayer{}
-	} else if cmd == "json{}" {
+	textRe := regexp.MustCompile(`text\{([\w\+]*)\}`)
+	if cmd == "json{}" {
 		pupDisplayer = JSONDisplayer{}
-	} else if match := attrRe.FindAllStringSubmatch(cmd, -1); len(match) == 1 {
+	} else if textMatch := textRe.FindAllStringSubmatch(cmd, -1); textMatch != nil {
+		pupDisplayer = TextDisplayer{
+			Mods: strings.Split(textMatch[0][1], "+"),
+		}
+	} else if attrMatch := attrRe.FindAllStringSubmatch(cmd, -1); len(attrMatch) == 1 {
 		pupDisplayer = AttrDisplayer{
-			Attr: match[0][1],
+			Attr: attrMatch[0][1],
 		}
 	} else {
 		return fmt.Errorf("Unknown displayer")
@@ -238,7 +242,9 @@ func (t TreeDisplayer) printIndent(level int) {
 }
 
 // Print the text of a node
-type TextDisplayer struct{}
+type TextDisplayer struct {
+	Mods []string
+}
 
 func (t TextDisplayer) Display(nodes []*html.Node) {
 	for _, node := range nodes {
@@ -248,6 +254,20 @@ func (t TextDisplayer) Display(nodes []*html.Node) {
 				// don't escape javascript
 				if node.Parent == nil || node.Parent.DataAtom != atom.Script {
 					data = html.EscapeString(data)
+				}
+			}
+			for _, mod := range t.Mods {
+				switch mod {
+				case "":
+					// ignore
+				case "trim":
+					data = strings.TrimSpace(data)
+				case "lower":
+					data = strings.ToLower(data)
+				case "upper":
+					data = strings.ToUpper(data)
+				default:
+					fmt.Fprintf(os.Stderr, "Text modifier '%s' not recognized, ignoring\n", mod)
 				}
 			}
 			fmt.Println(data)

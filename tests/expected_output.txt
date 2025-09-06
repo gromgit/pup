@@ -12,6 +12,10 @@ a92e50c09cd56970625ac3b74efbddb83b2731bb table li
 0d3918d54f868f13110262ffbb88cbb0b083057d table a[title="The Practice of Programming"] text{}
 87f5da2293a986a4699c0fb6c136d5d5205df768 json{}
 95ef88ded9dab22ee3206cca47b9c3a376274bda text{}
+324c8096b47e250a07ef4801537de1fe2f0e24d1 text{trim}
+5f38fa7d1c61ec17ce6727329ad6aa684638451a text{upper+trim}
+0380638efdb18601e2bbf4c11db8f58876b0497b text{lower+trim}
+5f38fa7d1c61ec17ce6727329ad6aa684638451a text{trim+lower+upper}
 e4f7358fbb7bb1748a296fa2a7e815fa7de0a08b .after-portlet
 da39a3ee5e6b4b0d3255bfef95601890afd80709 .after
 8c3d99638ba48ab6487b76929ab796ca1b40adc7 .dtstart.updated
@@ -65,6 +69,10 @@ a7dafee8ca1e09c4ab39e36a1c861a9415944e22 table li:last-of-type
 0d3918d54f868f13110262ffbb88cbb0b083057d table a[title="The Practice of Programming"] text{}
 db3637df5f20644eb12e2ba9536479b271f0ea39 json{}
 95ef88ded9dab22ee3206cca47b9c3a376274bda text{}
+324c8096b47e250a07ef4801537de1fe2f0e24d1 text{trim}
+5f38fa7d1c61ec17ce6727329ad6aa684638451a text{upper+trim}
+0380638efdb18601e2bbf4c11db8f58876b0497b text{lower+trim}
+5f38fa7d1c61ec17ce6727329ad6aa684638451a text{trim+lower+upper}
 5840895dcf36c4eadfc911eb87eb61f89f448c00 .after-portlet
 da39a3ee5e6b4b0d3255bfef95601890afd80709 .after
 8adaa62f3360f31b1f6f0ca9a0ecabc66b6c6191 .dtstart.updated
