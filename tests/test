@@ -13,9 +13,12 @@ fatal() {
   exit 1
 }
 
+# dumpit <section#> <line#> <cmdline>
 dumpit() {
   if [[ -n ${dumpdir} ]]; then
-    tee "$(printf %s/%d-%04d.txt "${dumpdir}" "$@")"
+    local f; f=$(printf %s/%d-%04d.txt "${dumpdir}" "$1" "$2")
+    echo "<!-- $3 -->" > "$f"
+    tee -a "$f"
   else
     cat
   fi
@@ -37,7 +40,7 @@ while read -r t; do
     read -ra flags <<<"${BASH_REMATCH[1]}"
     ((section++, line=1))
   else
-    "${pup}" "${flags[@]}" "${t}" < "${input}" | dumpit "${section}" "${line}" | shasum | while read -r sum _; do
+    "${pup}" "${flags[@]}" "${t}" < "${input}" | dumpit "${section}" "${line}" "${pup} ${flags[*]} ${t}" | shasum | while read -r sum _; do
       echo "${sum} ${t}"
     done
     ((line++))
