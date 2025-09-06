@@ -1,5 +1,6 @@
 pup
 dist/
 testpages/*
+tests/dump/
 tests/test_results.txt
 robots.html
