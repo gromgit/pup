@@ -6,7 +6,7 @@ require (
 	github.com/fatih/color v1.19.0
 	github.com/mattn/go-colorable v0.1.14
 	golang.org/x/net v0.52.0
-	golang.org/x/text v0.35.0
+	golang.org/x/text v0.36.0
 )
 
 require (
