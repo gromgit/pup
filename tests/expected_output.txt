@@ -1,13 +1,13 @@
-c00fef10d36c1166cb5ac886f9d25201b720e37e #footer
-a7bb8dbfdd638bacad0aa9dc3674126d396b74e2 #footer li
+07dea58b191d2300aee057519bc6942fc0d143f7 #footer
+4c7674febb122f172c6b6ef5e21db6873e55379e #footer li
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li + a
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li + a attr{title}
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li > li
-a92e50c09cd56970625ac3b74efbddb83b2731bb table li
-505c04a42e0084cd95560c233bd3a81b2c59352d table li:first-child
-505c04a42e0084cd95560c233bd3a81b2c59352d table li:first-of-type
-66950e746590d7f4e9cfe3d1adef42cd0addcf1d table li:last-child
-66950e746590d7f4e9cfe3d1adef42cd0addcf1d table li:last-of-type
+fbfeba079af17fb1cf1bf75362bc778919e5327d table li
+ee59d60d0eb6050ea71508af7d26b9925c877758 table li:first-child
+ee59d60d0eb6050ea71508af7d26b9925c877758 table li:first-of-type
+dde1203cb9645dd849b7d719864f8b371309eae5 table li:last-child
+dde1203cb9645dd849b7d719864f8b371309eae5 table li:last-of-type
 0a37d612cd4c67a42bd147b1edc5a1128456b017 table a[title="The Practice of Programming"]
 0d3918d54f868f13110262ffbb88cbb0b083057d table a[title="The Practice of Programming"] text{}
 87f5da2293a986a4699c0fb6c136d5d5205df768 json{}
@@ -16,23 +16,23 @@ a92e50c09cd56970625ac3b74efbddb83b2731bb table li
 5f38fa7d1c61ec17ce6727329ad6aa684638451a text{upper+trim}
 0380638efdb18601e2bbf4c11db8f58876b0497b text{lower+trim}
 5f38fa7d1c61ec17ce6727329ad6aa684638451a text{trim+lower+upper}
-e4f7358fbb7bb1748a296fa2a7e815fa7de0a08b .after-portlet
+f8641978335407678fa7232124a320c0bfcaa1c8 .after-portlet
 da39a3ee5e6b4b0d3255bfef95601890afd80709 .after
 8c3d99638ba48ab6487b76929ab796ca1b40adc7 .dtstart.updated
-9ef12e8e33809b2bddeccf158dc6f6abb48be39a :empty
+0a6591509e0fe9a6133ff678af88a957a0201815 :empty
 3406ca0f548d66a7351af5411ce945cf67a2f849 td:empty
-30fff0af0b1209f216d6e9124e7396c0adfa0758 .navbox-list li:nth-child(1)
-a38e26949f047faab5ea7ba2acabff899349ce03 .navbox-list li:nth-child(2)
-d954831229a76b888e85149564727776e5a2b37a .navbox-list li:nth-child(3)
-d314e83b059bb876b0e5ee76aa92d54987961f9a .navbox-list li:nth-last-child(1)
-1f19496e239bca61a1109dbbb8b5e0ab3e302b50 .navbox-list li:nth-last-child(2)
-1ec9ebf14fc28c7d2b13e81241a6d2e1608589e8 .navbox-list li:nth-last-child(3)
-52e726f0993d2660f0fb3ea85156f6fbcc1cfeee .navbox-list li:nth-child(n+1)
-0b20c98650efa5df39d380fea8d5b43f3a08cb66 .navbox-list li:nth-child(3n+1)
-52e726f0993d2660f0fb3ea85156f6fbcc1cfeee .navbox-list li:nth-last-child(n+1)
-972973fe1e8f63e4481c8641d6169c638a528a6e .navbox-list li:nth-last-child(3n+1)
-56e8ed51e02c09a487e5356b632db0c8822284e8 :only-child
-44c99f6ad37b65dc0893cdcb1c60235d827ee73e .navbox-list li:only-child
+07d31deadc456cde9fc480513d5bb0d2ccc1c488 .navbox-list li:nth-child(1)
+9e0001aef72434894967bfd47a0a972151fd100c .navbox-list li:nth-child(2)
+4b55a5cc5a4959afdec3649db5b441ac0bd4c4d5 .navbox-list li:nth-child(3)
+db9b1aaf03b236bfaa8fa50fc10355ee3d9be8f3 .navbox-list li:nth-last-child(1)
+cd7c27419b3bd00cb3305573a46f33b595bea970 .navbox-list li:nth-last-child(2)
+6aaaf7cafc83e6470b31b7d3012001b72f587c27 .navbox-list li:nth-last-child(3)
+7b2f918be8dac587e30c9e1a8bfbf746dd2a5ab9 .navbox-list li:nth-child(n+1)
+5b228073bab92d9632478c748483db7ad547edba .navbox-list li:nth-child(3n+1)
+7b2f918be8dac587e30c9e1a8bfbf746dd2a5ab9 .navbox-list li:nth-last-child(n+1)
+111c6afd51c842349e04d0b1dd49e963d84e1241 .navbox-list li:nth-last-child(3n+1)
+72a29613fb5b79040ba66b6675be2115c57ed2e7 :only-child
+b38a2e9602243bd01ed3e033010ceb5615892818 .navbox-list li:only-child
 641037814e358487d1938fc080e08f72a3846ef8 .summary
 641037814e358487d1938fc080e08f72a3846ef8 [class=summary]
 641037814e358487d1938fc080e08f72a3846ef8 [class="summary"]
@@ -44,27 +44,27 @@ cd0d4cc32346750408f7d4f5e78ec9a6e5b79a0d #toc li + a json{}
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + a + span
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + span
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li > li
-87eee1189dd5296d6c010a1ad329fc53c6099d72 li a:not([rel])
-055f3c98e9160beb13f72f1009ad66b6252a9bba link, a
-055f3c98e9160beb13f72f1009ad66b6252a9bba link ,a
-055f3c98e9160beb13f72f1009ad66b6252a9bba link , a
+054436964b25a75b1a148e6535cf50dd140bacd9 li a:not([rel])
+d51bb20787fa905e4e1e56beab955ee305fe310f link, a
+d51bb20787fa905e4e1e56beab955ee305fe310f link ,a
+d51bb20787fa905e4e1e56beab955ee305fe310f link , a
 0d1f66765d1632c70f8608947890524e78459362 link , a sup
 b6a3d6cccd305fcc3e8bf2743c443743bdaaa02b link , a:parent-of(sup)
 0d1f66765d1632c70f8608947890524e78459362 link , a:parent-of(sup) sup
 da39a3ee5e6b4b0d3255bfef95601890afd80709 li --number
 da39a3ee5e6b4b0d3255bfef95601890afd80709 li -n
-4c15ca8f190a4412469e487fab6f7ad2479f922f p:contains("Rob")
-1d01b213218645c7ba63da1f351e8269c1f6421a p:matches("Ro*")
-21686d09f2802fa7f111c9f04dd0dacd7e4e6505 #footer
-59ac6247d71b9e848aa1e42bb92a4d76f2c55729 #footer li
+21261b6cc6cb19cd8a958b16703bdc76c094afde p:contains("Rob")
+3843b001d2d0fdcb6c04f31de18ffeb557c6386d p:matches("Ro*")
+531ab7a9aea27899aad10adc0873afbd1119ce08 #footer
+6ac410dc37c17cdeac38670739318744e33f565e #footer li
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li + a
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li + a attr{title}
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #footer li > li
-6b90249f0250173542e7ff1716f9166f8c01eeec table li
-281c2312d039d7ad2fd8d33f10d265ea4e225d6e table li:first-child
-281c2312d039d7ad2fd8d33f10d265ea4e225d6e table li:first-of-type
-a7dafee8ca1e09c4ab39e36a1c861a9415944e22 table li:last-child
-a7dafee8ca1e09c4ab39e36a1c861a9415944e22 table li:last-of-type
+fbf89f26183bdb6659c0ae8afebf2e1c53a34415 table li
+75194c97dfbfadbb3db861c2819d8d7e0ef82dfb table li:first-child
+75194c97dfbfadbb3db861c2819d8d7e0ef82dfb table li:first-of-type
+e4220d56f8258166fb50c3d4c36f3f30e8f08eb7 table li:last-child
+e4220d56f8258166fb50c3d4c36f3f30e8f08eb7 table li:last-of-type
 3b7b51a73fb5147ceceb63cff599fa7197f23051 table a[title="The Practice of Programming"]
 0d3918d54f868f13110262ffbb88cbb0b083057d table a[title="The Practice of Programming"] text{}
 db3637df5f20644eb12e2ba9536479b271f0ea39 json{}
@@ -73,23 +73,23 @@ db3637df5f20644eb12e2ba9536479b271f0ea39 json{}
 5f38fa7d1c61ec17ce6727329ad6aa684638451a text{upper+trim}
 0380638efdb18601e2bbf4c11db8f58876b0497b text{lower+trim}
 5f38fa7d1c61ec17ce6727329ad6aa684638451a text{trim+lower+upper}
-5840895dcf36c4eadfc911eb87eb61f89f448c00 .after-portlet
+a677590096707241eacc7bc0b9b735afcda062f7 .after-portlet
 da39a3ee5e6b4b0d3255bfef95601890afd80709 .after
 8adaa62f3360f31b1f6f0ca9a0ecabc66b6c6191 .dtstart.updated
-0ef17ce9b9d7625b18b736374aa702ea53e61fe9 :empty
+ed1b20ba73fd157246191c4cffc599f8e1326a1e :empty
 6ab626c251eb3023f0a7a40201270b8f689e634b td:empty
-63e7be95290bdd49f2aa73c72079840de27a298f .navbox-list li:nth-child(1)
-00a8a1696e87e79a8d5fb72b1ec7593a6308a639 .navbox-list li:nth-child(2)
-cd67298f51058de60908821f0d8dd91585742d1e .navbox-list li:nth-child(3)
-6cdd45e4e74c4bfa15be607ff9bc2ff211ff70fb .navbox-list li:nth-last-child(1)
-9dabb6cc0540bb22e5c8cd655e97d7317903c695 .navbox-list li:nth-last-child(2)
-0617ad2ebc5c56db0c6ed544fe79c4167336ad5b .navbox-list li:nth-last-child(3)
-4d94ef57bbf233aa84cd860daa555e26ef329c75 .navbox-list li:nth-child(n+1)
-f6badd542b9bb30490b998fca8a0a5102e7e403c .navbox-list li:nth-child(3n+1)
-4d94ef57bbf233aa84cd860daa555e26ef329c75 .navbox-list li:nth-last-child(n+1)
-dd6e2f353f2511986284e52f5de2fb0d6a6c0397 .navbox-list li:nth-last-child(3n+1)
-1b847807da8c959674fd5cb484c9f302980e7868 :only-child
-c42d8d29196c2dd9536558bd6070ebefda6035ed .navbox-list li:only-child
+7fa13ecbc63d0a25debf8a07ccc15cc00ff39012 .navbox-list li:nth-child(1)
+4dc06a4a30efb33cb293b89eb2a91c8f8dd52a82 .navbox-list li:nth-child(2)
+2970f8be566268026906035bc26bb152e0022210 .navbox-list li:nth-child(3)
+ba4f0be969284d88bb47eb18aa7c02b7fc2556ff .navbox-list li:nth-last-child(1)
+8fb0ba5eeba7c73eaece2046bdfd1d0752f91844 .navbox-list li:nth-last-child(2)
+88acb1f44219aebe378bde21c678aa3fb8c3bc51 .navbox-list li:nth-last-child(3)
+20389b6a07926c3798d8a578c546d27d6ba5b2ab .navbox-list li:nth-child(n+1)
+b3573c4ec4917693cd21056e707073bf9f82ccf5 .navbox-list li:nth-child(3n+1)
+20389b6a07926c3798d8a578c546d27d6ba5b2ab .navbox-list li:nth-last-child(n+1)
+7b74d230836d64cdd12b01412906a89dcbc48180 .navbox-list li:nth-last-child(3n+1)
+434f960fa974da63eaf1e795acff220e53ebcffa :only-child
+847bd0b59aafb2fd8147bd472121d063e2880996 .navbox-list li:only-child
 5eecf5fa11b0843f27e60afcd5780661fedf2482 .summary
 5eecf5fa11b0843f27e60afcd5780661fedf2482 [class=summary]
 5eecf5fa11b0843f27e60afcd5780661fedf2482 [class="summary"]
@@ -101,14 +101,14 @@ da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + a text{}
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + a + span
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li + span
 da39a3ee5e6b4b0d3255bfef95601890afd80709 #toc li > li
-c4856bfe75a7596c6f082c9e2a67e5ae0860d387 li a:not([rel])
-b06226be351780e1698b606f1226f79ab4a68817 link, a
-b06226be351780e1698b606f1226f79ab4a68817 link ,a
-b06226be351780e1698b606f1226f79ab4a68817 link , a
+be9e2e0a910a2e4adca392e5946858b00b6a9348 li a:not([rel])
+90d149a4c63873d30fa9f0858b36b95853313056 link, a
+90d149a4c63873d30fa9f0858b36b95853313056 link ,a
+90d149a4c63873d30fa9f0858b36b95853313056 link , a
 dee8e56503a021bc2964f762f0a7fc2b52c05e36 link , a sup
 76d9e66481fe6aefc2a8b59410dfa439562fd64d link , a:parent-of(sup)
 dee8e56503a021bc2964f762f0a7fc2b52c05e36 link , a:parent-of(sup) sup
 da39a3ee5e6b4b0d3255bfef95601890afd80709 li --number
 da39a3ee5e6b4b0d3255bfef95601890afd80709 li -n
-7afea0a296eb2c91d2f08dc75abebb9c8a245d2a p:contains("Rob")
-0ea8f38e34929e44bfee0ab6471449a2b02efcab p:matches("Ro*")
+ae0911ab3a842c1f10c040ebe7f64f55a14be334 p:contains("Rob")
+4ce8dd7572365ede7ab5b374cc1c3c128f17a4cb p:matches("Ro*")
