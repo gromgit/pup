@@ -1,12 +1,12 @@
 module github.com/gromgit/pup
 
-go 1.25.0
+go 1.26.0
 
 require (
 	github.com/fatih/color v1.19.0
 	github.com/mattn/go-colorable v0.1.15
 	golang.org/x/net v0.58.0
-	golang.org/x/text v0.41.0
+	golang.org/x/text v0.42.0
 )
 
 require (
